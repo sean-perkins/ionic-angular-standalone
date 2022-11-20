@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, EnvironmentInjector } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-tabs',
   templateUrl: 'tabs.page.html',
-  styleUrls: ['tabs.page.scss']
+  styleUrls: ['tabs.page.scss'],
+  imports: [
+    IonicModule,
+    CommonModule,
+  ],
+  standalone: true
 })
 export class TabsPage {
 
-  constructor() {}
+  constructor(public environmentInjector: EnvironmentInjector) { }
 
 }
