@@ -1,6 +1,5 @@
 import { Component, EnvironmentInjector } from '@angular/core';
-import { RouteReuseStrategy } from '@angular/router';
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +7,6 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
   styleUrls: ['app.component.scss'],
   imports: [
     IonicModule
-  ],
-  providers: [
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   standalone: true
 })
